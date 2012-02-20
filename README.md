@@ -2,22 +2,16 @@
 
 Based on http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-
-
-## Install pathogen
-
-http://www.vim.org/scripts/script.php?script_id=2332
-
-
-
 ## Installing your Vim environment
 
-	git clone http://github.com/username/dotvim.git dotvim
-	cd dotvim
+	cd ~
+	git clone http://github.com/rstuven/dotvim.git .rstuven-dotvim
+	cd .rstuven-dotvim
 	git submodule update --init
 
 ### Linux:
-	ln -s ./vimrc ~/.vimrc
+	ln -s ~/.rstuven-dotvim ~/.vim
+	ln -s ~/.rstuven-dotvim/vimrc ~/.vimrc
 
 ### Windows:
 	mklink /h "./vimrc" "%USERPROFILE%/_vimrc"
@@ -27,10 +21,10 @@ http://www.vim.org/scripts/script.php?script_id=2332
 
 ## Install plugins as submodules
 
-	cd bundle
+	cd ~/.rstuven-dotvim
 	git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 	git add .
-	git commit -m "Install Fugitive.vim bundle as a submodule."
+	git commit -m "Installed Fugitive.vim bundle as a submodule."
 
 
 
