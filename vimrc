@@ -47,17 +47,16 @@ set encoding=utf-8
 
 " Color scheme in 256 colors
 set t_Co=256
-"colors railscasts
-color slate
+colors railscasts
 
 " CakePHP CTP files syntax highlighting
-"autocmd BufEnter *.ctp set syn=php
+autocmd BufEnter *.ctp set syn=php
 
 " Open a NERDTree automatically when vim starts up
-"autocmd vimenter * NERDTree
+autocmd vimenter * NERDTree
 
 " Close vim if the only window left open is a NERDTree
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 set langmenu=en
