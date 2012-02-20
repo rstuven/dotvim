@@ -12,12 +12,12 @@ http://www.vim.org/scripts/script.php?script_id=2332
 
 ## Installing your Vim environment
 
-	git clone http://github.com/username/dotvim.git dotvim
+	git clone http://github.com/rstuven/dotvim.git .rstuven-dotvim
 	cd dotvim
 	git submodule update --init
 
 ### Linux:
-	ln -s ./vimrc ~/.vimrc
+	ln -s ~/.rstuven-dotvim/vimrc ~/.vimrc
 
 ### Windows:
 	mklink /h "./vimrc" "%USERPROFILE%/_vimrc"
