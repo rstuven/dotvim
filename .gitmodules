@@ -22,3 +22,9 @@
 [submodule "bundle/PIV"]
 	path = bundle/PIV
 	url = git://github.com/spf13/PIV.git
+[submodule "bundle/quickfixsigns"]
+	path = bundle/quickfixsigns
+	url = git://github.com/tomtom/quickfixsigns_vim.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
