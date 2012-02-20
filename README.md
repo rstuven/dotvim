@@ -2,21 +2,15 @@
 
 Based on http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 
-
-
-## Install pathogen
-
-	mkdir -p ~/.vim/autoload ~/.vim/bundle 
-	curl 'www.vim.org/scripts/download_script.php?src_id=16224' > ~/.vim/autoload/pathogen.vim
-
-
 ## Installing your Vim environment
 
+	cd ~
 	git clone http://github.com/rstuven/dotvim.git .rstuven-dotvim
-	cd dotvim
+	cd .rstuven-dotvim
 	git submodule update --init
 
 ### Linux:
+	ln -s ~/.rstuven-dotvim ~/.vim
 	ln -s ~/.rstuven-dotvim/vimrc ~/.vimrc
 
 ### Windows:
