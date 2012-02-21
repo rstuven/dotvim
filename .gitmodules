@@ -37,3 +37,6 @@
 [submodule "bundle/web-indent"]
 	path = bundle/web-indent
 	url = git://github.com/lukaszb/vim-web-indent.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
