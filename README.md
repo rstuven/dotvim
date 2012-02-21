@@ -5,7 +5,7 @@ Based on http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-
 ## Installing your Vim environment
 
 	cd ~
-	git clone http://github.com/rstuven/dotvim.git .rstuven-dotvim
+	git clone git@github.com:rstuven/dotvim.git .rstuven-dotvim
 	cd .rstuven-dotvim
 	git submodule update --init
 
