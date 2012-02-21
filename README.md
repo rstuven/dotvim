@@ -22,7 +22,7 @@ Based on http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-
 ## Install plugins as submodules
 
 	cd ~/.rstuven-dotvim
-	git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
+	git submodule add git://github.com/tpope/vim-fugitive.git bundle/fugitive
 	git add .
 	git commit -m "Installed Fugitive.vim bundle as a submodule."
 
