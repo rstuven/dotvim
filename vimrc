@@ -70,6 +70,7 @@
     set smartcase                   " case sensitive when uc present
     set wildmenu                    " show list instead of just completing
     set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common part, then all.
+    set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
     set whichwrap=b,s,h,l,<,>,[,]   " backspace and cursor keys wrap to
     set scrolljump=5                " lines to scroll when cursor leaves screen
     set scrolloff=3                 " minimum lines to keep above and below cursor
@@ -77,6 +78,8 @@
     set list
     set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
     set guifont=Lucida_Console:h8
+    set langmenu=en
+    set helplang=en
 
 " }
 
@@ -97,10 +100,6 @@
     set cindent
     set smartindent
     set autoindent
-
-    " Tab completion
-    set wildmode=list:longest,list:full
-    set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " }
 
@@ -375,9 +374,6 @@
 " CakePHP CTP files syntax highlighting
 autocmd BufEnter *.ctp set syn=php
 
-
-
-set langmenu=en
 
 
 syntax on
