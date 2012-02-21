@@ -226,13 +226,13 @@
 
         let NERDTreeShowBookmarks=1
         let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-        let NERDTreeChDirMode=0
-        let NERDTreeQuitOnOpen=1
-        let NERDTreeShowHidden=1
+        let NERDTreeChDirMode=1
+        let NERDTreeQuitOnOpen=0
+        let NERDTreeShowHidden=0
         let NERDTreeKeepTreeInNewTab=1
 
         " Open a NERDTree automatically when vim starts up
-        autocmd vimenter * NERDTree
+        "autocmd vimenter * NERDTree
 
         " Close vim if the only window left open is a NERDTree
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
