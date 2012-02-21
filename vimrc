@@ -271,49 +271,49 @@
           endfunction
 
         endif
-     " }
+    " }
 
-     " Session List {
+    " Session List {
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
         nmap <leader>sl :SessionList<CR>
         nmap <leader>ss :SessionSave<CR>
-     " }
+    " }
 
-     " Buffer explorer {
+    " Buffer explorer {
         nmap <leader>b :BufExplorer<CR>
-     " }
+    " }
 
-     " JSON {
+    " JSON {
         nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
-     " }
+    " }
 
-     " PyMode {
+    " PyMode {
         let g:pymode_lint_checker = "pyflakes"
-     " }
+    " }
 
-     " ctrlp {
+    " ctrlp {
         let g:ctrlp_working_path_mode = 2
         nnoremap <silent> <D-t> :CtrlP<CR>
         nnoremap <silent> <D-r> :CtrlPMRU<CR>
         let g:ctrlp_custom_ignore = {
             \ 'dir':  '\.git$\|\.hg$\|\.svn$',
             \ 'file': '\.exe$\|\.so$\|\.dll$' }
-     "}
+    "}
 
-     " TagBar {
+    " TagBar {
         nnoremap <silent> <leader>tt :TagbarToggle<CR>
-     "}
+    "}
 
-     " Fugitive {
+    " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
         nnoremap <silent> <leader>gd :Gdiff<CR>
         nnoremap <silent> <leader>gc :Gcommit<CR>
         nnoremap <silent> <leader>gb :Gblame<CR>
         nnoremap <silent> <leader>gl :Glog<CR>
         nnoremap <silent> <leader>gp :Git push<CR>
-     "}
+    "}
 
-     " neocomplcache {
+    " neocomplcache {
         let g:neocomplcache_enable_at_startup = 1
         let g:neocomplcache_enable_camel_case_completion = 1
         let g:neocomplcache_enable_smart_case = 1
@@ -369,10 +369,20 @@
             set conceallevel=2 concealcursor=i
         endif
 
-     " }
+    " }
+
+    " checksyntax {
+        if !exists('g:checksyntax')
+            let g:checksyntax = {}
+        endif
+        if executable('jshint')
+            let g:checksyntax['javascript'] = {
+                \ 'cmd': 'jshint'
+                \ }
+        endif
+    " }
+
 " }
-
-
 
 
 " CakePHP CTP files syntax highlighting
