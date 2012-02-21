@@ -238,6 +238,10 @@
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
     " }
 
+    " NerdTreeTabs {
+        map <Leader>n <plug>NERDTreeTabsToggle<CR>
+    " }
+
     " Tabularize {
         if exists(":Tabularize")
           nmap <Leader>a= :Tabularize /=<CR>
