@@ -6,7 +6,6 @@
 
 " General {
 
-
     set background=dark     " Assume a dark background
 
     " Enable Pathogen
@@ -100,6 +99,12 @@
     set cindent
     set smartindent
     set autoindent
+
+    " CakePHP CTP files syntax highlighting
+    autocmd BufEnter *.ctp set syn=php
+
+    syntax on
+    filetype plugin indent on
 
 " }
 
@@ -299,17 +304,11 @@
         endif
     " }
 
+    " Powerline {
+        let g:Powerline_symbols = 'fancy'
+    " }
+
 " }
-
-
-" CakePHP CTP files syntax highlighting
-autocmd BufEnter *.ctp set syn=php
-
-
-
-syntax on
-filetype plugin indent on
-
 
 " Use local vimrc if available {
     if filereadable(expand("~/.vimrc.local"))
