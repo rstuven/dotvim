@@ -43,3 +43,6 @@
 [submodule "bundle/nerdtree-tabs"]
 	path = bundle/nerdtree-tabs
 	url = git://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/csapprox"]
+	path = bundle/csapprox
+	url = git://github.com/godlygeek/csapprox.git
