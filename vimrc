@@ -94,7 +94,7 @@
     set pastetoggle=<F12>           " pastetoggle (sane indentation on pastes)
     "set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
     " Remove trailing whitespaces and ^M chars
-    autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+    "autocmd FileType c,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
     set cindent
     set smartindent
@@ -116,6 +116,13 @@
     " Indent/Unindent using TAB
     vmap <TAB> >gv
     vmap <S-TAB> <gv
+
+    " Insert a single character
+    function! RepeatChar(char, count)
+        return repeat(a:char, a:count)
+    endfunction
+    nnoremap s :<C-U>exec "normal i".RepeatChar(nr2char(getchar()), v:count1)<CR>
+    "nnoremap S :<C-U>exec "normal a".RepeatChar(nr2char(getchar()), v:count1)<CR>
 
     " Making it so ; works like : for commands. Saves typing and eliminates :W style typos due to lazy holding shift.
     nnoremap ; :
@@ -168,7 +175,7 @@
 " Plugins {
 
     " PIV {
-        let g:DisableAutoPHPFolding = 0
+        let g:DisableAutoPHPFolding = 1
         let g:PIVAutoClose = 0
     " }
 
