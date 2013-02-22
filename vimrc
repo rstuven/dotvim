@@ -193,6 +193,10 @@
     " Adjust viewports to the same size
     map <Leader>= <C-w>=
 
+    " Ctrl-Q to quit as recommended here in http://stackoverflow.com/a/7884226/149444
+    silent !stty -ixon > /dev/null 2>/dev/null
+    nmap <C-Q> :quit<CR>
+
 " }
 
 " Plugins {
