@@ -151,10 +151,14 @@
     nnoremap ; :
 
     " Easier moving in tabs and windows
-    map <C-J> <C-W>j<C-W>_
-    map <C-K> <C-W>k<C-W>_
-    map <C-L> <C-W>l<C-W>_
-    map <C-H> <C-W>h<C-W>_
+    map <C-J> <C-W>j
+    map <C-K> <C-W>k
+    map <C-L> <C-W>l
+    map <C-H> <C-W>h
+    map gj <C-W>j<C-W>_
+    map gk <C-W>k<C-W>_
+    map gl <C-W>l:vertical res<CR>
+    map gh <C-W>h:vertical res<CR>
 
     " Stupid shift key fixes
     cmap W w
