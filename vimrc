@@ -1,12 +1,18 @@
 " Environment {
     " Basics {
         set nocompatible        " must be first line
+        set noswapfile          " disable swap file creation
+        set shell=/bin/sh       " for compatibility with Fish
     " }
 " }
 
 " General {
 
     set background=dark     " Assume a dark background
+
+    " To disable a plugin, add it's bundle name to the following list
+    let g:pathogen_disabled = []
+    "call add(g:pathogen_disabled, 'nerdtree')
 
     " Enable Pathogen
     call pathogen#infect()
@@ -18,20 +24,37 @@
     " Set encoding
     set encoding=utf-8
 
+    if has ('x') && has ('gui') " on Linux use + register for copy-paste
+        set clipboard=unnamedplus
+    elseif has ('gui') " one mac and windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+
+    "set mouse=a                 " automatically enable mouse usage
+    "set mousehide               " hide the mouse cursor while typing
+
 " }
 
 " Vim UI {
 
+    " Syntax MUST BE on before highlight settings.
+    syntax on
+
     " Color scheme in 256 colors
     set t_Co=256
     colors railscasts
-
+    " Some corrections to color schema
+    highlight DiffAdd ctermfg=white ctermbg=green
+    highlight Todo ctermfg=white ctermbg=yellow
 
     set showmode                    " display the current mode
 
-    " Highlight cursor
-    highlight CursorLine ctermbg=8 cterm=NONE
+    " Guide column
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=233
 
+    " Highlight cursor
+    "highlight CursorLine ctermbg=8 cterm=NONE
     set cursorline                  " highlight current line
 
     " Highlight current line only in insert mode
@@ -99,11 +122,11 @@
     set cindent
     set smartindent
     set autoindent
+    set fileformat=unix
 
     " CakePHP CTP files syntax highlighting
     autocmd BufEnter *.ctp set syn=php
 
-    syntax on
     filetype plugin indent on
 
 " }
@@ -292,7 +315,7 @@
     "}
 
     " Fugitive {
-        nnoremap <silent> <leader>gs :Gstatus<CR>
+        nnoremap <silent> <leader>gs :Gstatus<CR>zR<C-w>20+
         nnoremap <silent> <leader>gd :Gdiff<CR>
         nnoremap <silent> <leader>gc :Gcommit<CR>
         nnoremap <silent> <leader>gb :Gblame<CR>
@@ -322,3 +345,4 @@
         source ~/.vimrc.local
     endif
 " }
+
