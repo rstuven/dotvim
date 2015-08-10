@@ -30,8 +30,8 @@
         set clipboard=unnamed
     endif
 
-    "set mouse=a                 " automatically enable mouse usage
-    "set mousehide               " hide the mouse cursor while typing
+    set mouse=a                 " automatically enable mouse usage
+    set mousehide               " hide the mouse cursor while typing
 
 " }
 
